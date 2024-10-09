@@ -1,0 +1,19 @@
+{
+  "name": "datafetch_manager",
+  "version": "1.0.0",
+  "description": "Welcome to the DataFetch_Manager! We’re glad you’re here to contribute to a growing collection of essential code solutions. Whether you’re here for Hacktoberfest or to enhance this repository, we appreciate your efforts!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}
