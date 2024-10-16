@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Login = () => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+const Login = ({ show, handleClose }) => {
   return (
     <>
+<<<<<<< HEAD
       {/* Bootstrap Navbar */}
       // <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       //   <a className="navbar-brand" href="#">MyApp</a>
@@ -24,6 +20,8 @@ const Login = () => {
       // </nav>
 
       {/* Login Modal */}
+=======
+>>>>>>> 6dc7f8d (update)
       {show && (
         <div className="modal fade show d-block" tabIndex="-1" role="dialog" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <div className="modal-dialog modal-dialog-centered" role="document">
