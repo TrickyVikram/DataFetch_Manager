@@ -1,56 +1,56 @@
 import React, { useState } from 'react';
-import { Navbar, Nav , Button, Modal, Form } from 'react-bootstrap';
-
-// import 'bootstrap/dist/js/bootstrap.bundle.min';
-
-
 
 const Login = () => {
-  // State to manage modal visibility
   const [show, setShow] = useState(false);
 
-  // Modal open and close handlers
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
     <>
       {/* Bootstrap Navbar */}
-      <Navbar bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand href="#">MyApp</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Button variant="primary" onClick={handleShow}>
-              Login
-            </Button>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a className="navbar-brand" href="#">MyApp</a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <button className="btn btn-primary" onClick={handleShow}>Login</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
       {/* Login Modal */}
-      <Modal show={show} onHide={handleClose} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Login</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-            </Form.Group>
-
-            <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
-        </Modal.Body>
-      </Modal>
+      {show && (
+        <div className="modal fade show d-block" tabIndex="-1" role="dialog" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
+          <div className="modal-dialog modal-dialog-centered" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">Login</h5>
+                <button type="button" className="close" aria-label="Close" onClick={handleClose}>
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
+                <form>
+                  <div className="form-group">
+                    <label htmlFor="formBasicEmail">Email address</label>
+                    <input type="email" className="form-control" id="formBasicEmail" placeholder="Enter email" />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="formBasicPassword">Password</label>
+                    <input type="password" className="form-control" id="formBasicPassword" placeholder="Password" />
+                  </div>
+                  <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
