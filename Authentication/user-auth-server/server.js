@@ -18,8 +18,15 @@ mongoose.connect('mongodb://localhost:27017/user-auth', {
   .catch(err => console.log(err));
 
 // Routes
-app.use('/api/auth', authRoutes);
+app.use('/api/auth', (req, res, next) => {
+    console.log('Auth API hit');
+    next(); 
+}, )
 
+app.get('/test' ,(req,res) => {
+res.send("test api is working")
+});
+   
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}}`);
 });
