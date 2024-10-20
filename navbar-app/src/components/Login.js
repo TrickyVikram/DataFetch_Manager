@@ -1,29 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Login = () => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+const Login = ({ show, handleClose }) => {
   return (
     <>
-      {/* Bootstrap Navbar */}
-      // <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      //   <a className="navbar-brand" href="#">MyApp</a>
-      //   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      //     <span className="navbar-toggler-icon"></span>
-      //   </button>
-      //   <div className="collapse navbar-collapse" id="navbarNav">
-      //     <ul className="navbar-nav ml-auto">
-      //       <li className="nav-item">
-      //         <button className="btn btn-primary" onClick={handleShow}>Login</button>
-      //       </li>
-      //     </ul>
-      //   </div>
-      // </nav>
-
-      {/* Login Modal */}
       {show && (
         <div className="modal fade show d-block" tabIndex="-1" role="dialog" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <div className="modal-dialog modal-dialog-centered" role="document">
