@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="payment-form">
+      <form action="/post" method="post">
+        <h1>Payment Form</h1>
+        <h4>User Details</h4>
+        <label for="fullnmae "> FullName: </label>
+        <input type="text" placeholder="enter your name" name="FullName" />
+        <br />
+        <label for="gender">Gender</label>
+        <div class="gender-section">
+          <label for="male">Male</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="female">Female</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="other">Others</label>
+          <input type="radio" id="other" name="gender" value="other" />
+        </div>
+        <label for="address">Address: </label>
+        <textarea type="text" rows="4" cols="50"></textarea>
+        <br />
+        <label for="eamil">Email: </label>
+        <input type="text" placeholder="type your email" name="email" />
+        <br />
+        <label for="pincode">Pincode: </label>
+        <input type="number" name="Pincode" />
+        <h4>Payment Details</h4>
+        <label for="card type">Card type: </label>
+        <input type="text" name="cardType" />
+        <br />
+        <label for="card number">Card number: </label>
+        <input type="number" name="cardNumber" />
+        <br />
+        <label for="expiration date">Expiration Date: </label>
+        <input type="date" name="expirationDate" />
+        <br />
+        <label for="cvv">CVV: </label>
+        <input type="number" name="cvv" />
+        <br />
+        <button type="submit">Pay Now</button>
+      </form>
+    </div>
+  </body>
+</html>
